@@ -1,0 +1,41 @@
+{
+  "name": "curriculum-protractor",
+  "version": "1.0.0",
+  "description": "Currículum Vitae testing scripts.",
+  "main": "e2e_conf.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pablomagro/E2E-testing-with-Protractor-and-React.git"
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "author": "Pablo Magro",
+  "email": "pmagas@gmail.com",
+  "url": "pablomagro.co.nz",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^2.21.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-selenium-webdriver": "^0.2.482",
+    "grunt-shell": "^1.3.0",
+    "protractor": "^4.0.0",
+    "shelljs": "^0.7.0",
+    "time-grunt": "^1.4.0"
+  },
+  "engines": {
+    "node": ">=5.0 <7",
+    "npm": ">=3.3 <4"
+  },
+  "scripts": {
+    "test": "npm run grunt-test-production",
+    "start-server": "./node_modules/.bin/webdriver-manager start",
+    "grunt-test-production": "export NODE_ENV=production ; grunt production",
+    "grunt-test-development": "export NODE_ENV=development ; grunt development",
+    "test-all-dev": "export NODE_ENV=development ; ./node_modules/.bin/protractor --suite all e2e_conf.js",
+    "test-all-prod": "export NODE_ENV=production ; ./node_modules/.bin/protractor --suite all e2e_conf.js",
+    "test-mainpage": "./node_modules/.bin/protractor --suite mainpage e2e_conf.js",
+    "test-training": "./node_modules/.bin/protractor --suite training e2e_conf.js"
+  }
+}
