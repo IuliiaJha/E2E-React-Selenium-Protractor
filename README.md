@@ -58,12 +58,12 @@ browser.ignoreSynchronization = true;
 ### Intallation
 
 Node.js comes with the node package manager `npm`, which you can use to install Protractor.
-```
+```bash
 $ npm install --save-dev protractor
 ```
 The [Selenium webriver][3] is included once you have installed Proctractor. Below command updates the Selenium webdriver, which also updates the [ChromeDriver][4].
 
-```
+```bash
 $ ./node_modules/.bin/webdriver-manager update
 ```
 ###### Selenium
@@ -80,7 +80,7 @@ Lets go to create the first protractor file which will run the e2e tests.
 
 You need to create configuration file for running your tests, you can review my `e2e_conf.js` configuration file for more details.
 
-```
+```javascript
 exports.config = {
   ...
 }
@@ -121,13 +121,13 @@ For e2e I use Jasmine, however it you are more familar with mocha you can use it
 Once everything is twiked is time to run a test. I store all my tests using suites by functionality to keep it simple and ordered.
 
 First of all we need to start up the Selenium Webdriver manager with the following command.
-```
+```bash
 $ ./node_modules/.bin/webdriver-manager start
 ```
 
 And then run all test in production .
 
-```
+```bash
 $ npm run test-all-prod
 ```
 
@@ -162,22 +162,22 @@ May be you'll need to install the chromedriver globally if you get below error:
 [15:22:35] E/launcher - Process exited with error code 199
 ```
 So
-```
+```bash
 $ sudo npm i -g chromedriver
 ```
 
 ### Summary
 
 #### Setup
-You can start to test the application cloning tre repository and installing the dependencies.
-```
+You can start to test the application cloning the repository and installing the dependencies.
+```bash
 $ git clone https://github.com/pablomagro/E2E-React-Selenium-Protractor.git
 $ cd E2E-React-Selenium-Protractor
 $ npm install
 ```
 
 #### To run
-```
+```bash
 $ grunt production
 ```
 
